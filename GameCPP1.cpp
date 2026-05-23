@@ -2,6 +2,7 @@
 #include <string>
 #include <cctype>
 #include <limits>
+#include <cstdlib>
 
 //End Of File Function
 [[nodiscard]] bool saver() {
@@ -84,7 +85,7 @@ int main() {
             if (!(saver())) return 1;
             bufferClear();
             std::cerr << "FATAL ERROR! PLEASE INPUT BETWEEN A, B, C, OR D\n";
-            return 'E';
+            return EXIT_FAILURE;
         }
         bufferClear();
         userInput = std::toupper(static_cast<unsigned char>(userInput));
